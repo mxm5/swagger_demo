@@ -62,6 +62,6 @@ public class ContactResource {
 
         contact.forEach(c -> map.put(c.getId(), c));
         contacts.putAll(map);
-        return (List<Contact>) contacts.values() ;
+        return new ArrayList<Contact>(contacts.values());
     }
 }
